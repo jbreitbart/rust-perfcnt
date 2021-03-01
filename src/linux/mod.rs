@@ -918,11 +918,7 @@ impl LostRecord {
         let id: u64 = read(ptr, 8);
         let lost: u64 = read(ptr, 16);
 
-        LostRecord {
-            header,
-            id,
-            lost,
-        }
+        LostRecord { header, id, lost }
     }
 }
 
