@@ -27,16 +27,16 @@ jobs:
           override: true
           components: rustfmt
 
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: build
 
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: test
           args: --workspace --exclude linux_generic_events
 
-      - uses: actions-rs/cargo@v1
+      - uses: actions-rs/cargo@v1.0.3
         with:
           command: fmt
           args: --all -- --check
